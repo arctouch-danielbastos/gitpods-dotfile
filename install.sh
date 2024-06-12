@@ -1,4 +1,4 @@
-#!/usr/bin/bash -i
+#!/usr/bin/env bash
 
 echo "Setting up ohmyzsh powerlevel10k"
 
