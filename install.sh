@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Setting up ohmyzsh powerlevel10k"
+
 # Install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
