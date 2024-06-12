@@ -4,6 +4,7 @@ echo "Setting up ohmyzsh powerlevel10k"
 
 # Install omz
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+sudo chsh -s $(which zsh) gitpod
 
 # Symlink dotfiles
 current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"
