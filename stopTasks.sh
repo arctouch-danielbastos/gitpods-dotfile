@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Define an array of task names to stop
-tasks_to_stop=("Python" "Data Services" "Devheh" "KMP")
+tasks_to_stop=("Python" "Data Services" "Devheh" "KMP	")
 
 # Run the command to list the tasks and store the output
 tasks_list=$(gp tasks list)

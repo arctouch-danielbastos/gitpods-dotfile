@@ -11,6 +11,7 @@ sudo chsh -s $(which zsh) gitpod
 
 # Install neovim
 brew install neovim
+"${current_dir}/stopTasks"
 
 # Symlink dotfiles
 current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"
