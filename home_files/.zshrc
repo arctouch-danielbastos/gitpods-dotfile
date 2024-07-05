@@ -3,6 +3,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# Let's not shadow gp
 unalias gp
 alias gpu='git push'
 

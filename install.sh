@@ -6,8 +6,8 @@ echo "Setting up ohmyzsh powerlevel10k"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sudo chsh -s $(which zsh) gitpod
 
-echo alias gitpod=/usr/bin/gp > $HOME/.oh-my-zsh/custom/gitpod.zsh
-env
+# echo alias gitpod=/usr/bin/gp > $HOME/.oh-my-zsh/custom/gitpod.zsh
+# env
 
 # Install neovim
 brew install neovim
