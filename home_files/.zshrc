@@ -5,7 +5,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Let's not shadow gp
 unalias gp
-alias gpu='git push'
+alias gps='git push'
 
 # Get home quick!
 alias cdq="cd $GITPOD_REPO_ROOT"
