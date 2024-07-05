@@ -9,6 +9,9 @@ sudo chsh -s $(which zsh) gitpod
 echo alias gitpod=/usr/bin/gp > $HOME/.oh-my-zsh/custom/gitpod.zsh
 env
 
+# Install neovim
+brew install neovim
+
 # Symlink dotfiles
 current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"
 dotfiles_source="${current_dir}/home_files"
