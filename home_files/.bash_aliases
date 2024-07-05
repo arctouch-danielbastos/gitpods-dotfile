@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # The Oh-My-Zsh Git plugin aliases `gp` to `git push`, but we don't want to shadow the Gitpods CLI
 # https://www.gitpod.io/docs/references/gitpod-cli
 unalias gp
