@@ -12,9 +12,10 @@ sudo chsh -s $(which zsh) gitpod
 # Install neovim
 brew install neovim
 
-# Symlink dotfiles
 current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"
 "${current_dir}/cleanUpTasks.sh"
+
+# Symlink dotfiles
 dotfiles_source="${current_dir}/home_files"
 
 while read -r file; do
