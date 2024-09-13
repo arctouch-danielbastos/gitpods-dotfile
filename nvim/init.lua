@@ -1,3 +1,6 @@
+-- Set leader key
+vim.g.mapleader = " "
+
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -74,6 +77,8 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
+      require('mini.surround').setup() 
+
       require('mini.jump').setup {
         -- Module mappings. Use `''` (empty string) to disable one.
         mappings = {
@@ -100,10 +105,9 @@ require('lazy').setup({
     "ggandor/leap.nvim",
     config = function()
       require("leap").add_default_mappings()
-      vim.keymap.set('n',        's', '<Plug>(leap)')
-      vim.keymap.set('n',        'S', '<Plug>(leap-from-window)')
-      vim.keymap.set({'x', 'o'}, 's', '<Plug>(leap-forward)')
-      vim.keymap.set({'x', 'o'}, 'S', '<Plug>(leap-backward)')
+      vim.keymap.set('n',        'z', '<Plug>(leap)')
+      vim.keymap.set({'x', 'o'}, 'z', '<Plug>(leap-forward)')
+      vim.keymap.set({'x', 'o'}, 'Z', '<Plug>(leap-backward)')
     end,
     lazy = false,
   }
