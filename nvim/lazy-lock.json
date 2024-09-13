@@ -1,5 +1,0 @@
-{
-  "lazy.nvim": { "branch": "main", "commit": "44cd12fa2709a4de644b1d7c2773d5c59df07a66" },
-  "leap.nvim": { "branch": "main", "commit": "c6bfb191f1161fbabace1f36f578a20ac6c7642c" },
-  "mini.nvim": { "branch": "main", "commit": "12d275f4c3aeddfa12a758a69aff65090613ca34" }
-}
