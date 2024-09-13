@@ -12,8 +12,8 @@ current_dir=$(dirname "$(realpath "$0")")
 
 # Install neovim
 brew install neovim
-"${current_dir}/cleanUpTasks.sh"
-ln -s $(pwd)/nvim $(HOME)/.nvim
+"${curr ent_dir}/cleanUpTasks.sh"
+mv $(current_dir)/nvim $(HOME)/.nvim
 
 # Load bash environment in zsh
 # Taken from https://github.com/axonasif/bashenv.zsh
