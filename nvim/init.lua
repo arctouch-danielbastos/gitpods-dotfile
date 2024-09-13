@@ -74,20 +74,16 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
-
-      -- Add/delete/replace surroundings (brackets, quotes, etc.)
-      --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      -- require('mini.surround').setup()
-
     end,
   },
   {
     "ggandor/leap.nvim",
     config = function()
       require("leap").add_default_mappings()
+      vim.keymap.set('n',        's', '<Plug>(leap)')
+      vim.keymap.set('n',        'S', '<Plug>(leap-from-window)')
+      vim.keymap.set({'x', 'o'}, 's', '<Plug>(leap-forward)')
+      vim.keymap.set({'x', 'o'}, 'S', '<Plug>(leap-backward)')
     end,
     lazy = false,
   }
