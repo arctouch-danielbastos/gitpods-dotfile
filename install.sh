@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-# Install omz
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null
-sudo chsh -s $(which zsh) gitpod
-
-# Install neovim
-brew install neovim > /dev/null
-current_dir=$(dirname "$(realpath "$0")") 
-printf 'current dir is %s\n'  "$current_dir"
-
 # Ensure necessary directories exist
 mkdir -p "$HOME/.config/nvim"
 mkdir -p "$HOME/.local/share/nvim"
@@ -30,3 +21,12 @@ mv -f "$current_dir/zsh/dbastos.zsh-theme" "$HOME/.oh-my-zsh/themes/dbastos.zsh-
 # Load bash environment in zsh
 # Taken from https://github.com/axonasif/bashenv.zsh
 printf "set +m; source <(bash -lic 'declare -px'); set -m" >> "$HOME/.zshrc"
+
+# Install omz
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" & disown
+sudo chsh -s $(which zsh) gitpod
+
+# Install neovim
+brew install neovim > /dev/null & disown
+current_dir=$(dirname "$(realpath "$0")") 
+printf 'current dir is %s\n'  "$current_dir"
