@@ -1,0 +1,6 @@
+{
+  "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
+  "lazy.nvim": { "branch": "main", "commit": "44cd12fa2709a4de644b1d7c2773d5c59df07a66" },
+  "mini.nvim": { "branch": "main", "commit": "12d275f4c3aeddfa12a758a69aff65090613ca34" },
+  "which-key.nvim": { "branch": "main", "commit": "fb070344402cfc662299d9914f5546d840a22126" }
+}
