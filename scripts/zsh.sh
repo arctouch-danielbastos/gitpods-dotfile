@@ -4,16 +4,16 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null
 sudo chsh -s $(which zsh) gitpod
 
-current_dir=~/.dotfiles/scripts/zsh.sh
+dotfile_dir=~/.dotfiles
 
 # Ensure necessary directories exist
 mkdir -p "$HOME/.oh-my-zsh/themes"
 
-printf "===== MOVING ZSH FILES"
+printf "===== MOVING ZSH FILES\n"
 
 # Move or link the Zsh configuration files
-mv -f "$current_dir/zsh/.zshrc" "$HOME/.zshrc"
-mv -f "$current_dir/zsh/dbastos.zsh-theme" "$HOME/.oh-my-zsh/themes/dbastos.zsh-theme"
+mv -f "$dotfile_dir/zsh/.zshrc" "$HOME/.zshrc"
+mv -f "$dotfile_dir/zsh/dbastos.zsh-theme" "$HOME/.oh-my-zsh/themes/dbastos.zsh-theme"
 
 # Load bash environment in zsh
 # Taken from https://github.com/axonasif/bashenv.zsh
