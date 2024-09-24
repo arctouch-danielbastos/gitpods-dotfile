@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Install omz
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null
 sudo chsh -s $(which zsh) gitpod
 
 # Install neovim
-brew install neovim
+brew install neovim > /dev/null
 current_dir=$(dirname "$(realpath "$0")") 
 printf 'current dir is %s\n'  "$current_dir"
 
