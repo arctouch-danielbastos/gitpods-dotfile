@@ -20,11 +20,11 @@ mkdir -p "$HOME/.oh-my-zsh/themes"
 echo "===== MOVING NEOVIM FILES"
 
 # Move or link the Neovim configuration files
-mv "$current_dir/nvim/init.lua" "$HOME/.config/nvim/init.lua"
-mv "$current_dir/nvim/lazy" "$HOME/.local/share/nvim/lazy"
-mv "$current_dir/nvim/lazy-lock.json" "$HOME/.config/nvim/lazy-lock.json"
+mv -f "$current_dir/nvim/init.lua" "$HOME/.config/nvim/init.lua"
+mv -f "$current_dir/nvim/lazy" "$HOME/.local/share/nvim/lazy"
+mv -f "$current_dir/nvim/lazy-lock.json" "$HOME/.config/nvim/lazy-lock.json"
 
 echo "===== MOVING ZSH FILES"
 # Move or link the Zsh configuration files
-mv "$current_dir/zsh/.zshrc" "$HOME/.zshrc"
-mv "$current_dir/zsh/dbastos.zsh-theme" "$HOME/.oh-my-zsh/themes/dbastos.zsh-theme"
+mv -f "$current_dir/zsh/.zshrc" "$HOME/.zshrc"
+mv -f "$current_dir/zsh/dbastos.zsh-theme" "$HOME/.oh-my-zsh/themes/dbastos.zsh-theme"
