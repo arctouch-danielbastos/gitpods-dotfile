@@ -4,6 +4,8 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /dev/null
 sudo chsh -s $(which zsh) gitpod
 
+current_dir=~/.dotfiles/scripts/zsh.sh
+
 # Ensure necessary directories exist
 mkdir -p "$HOME/.oh-my-zsh/themes"
 
