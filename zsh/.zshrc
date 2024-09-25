@@ -12,7 +12,9 @@ ZSH_THEME="dbastos"
 plugins=(git aliases gh)
 
 source $ZSH/oh-my-zsh.sh
-
+unalias gp
+alias gs='git push'
+  
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
