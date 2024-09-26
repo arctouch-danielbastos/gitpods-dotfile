@@ -11,6 +11,9 @@ ZSH_THEME="dbastos"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git aliases gh)
 
+unalias gst
+alias gst='git status --short'
+
 source $ZSH/oh-my-zsh.sh
 unalias gp
 alias gs='git push'
