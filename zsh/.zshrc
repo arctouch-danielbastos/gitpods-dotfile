@@ -13,7 +13,7 @@ ZSH_THEME="dbastos"
 plugins=(git aliases gh)
 
 # Install oh-my-zsh
-source ~/.dotfiles/zsh/oh-my-zsh.sh
+source ~/.dotfiles/zsh/.oh-my-zsh/oh-my-zsh.sh
 unalias gp
 alias gs='git push'
   
