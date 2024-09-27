@@ -1,3 +1,3 @@
 #!/bin/bash
-bash ~/.dotfiles/modules/zsh/setup.sh
-bash ~/.dotfiles/modules/nvim/setup.sh & disown
+bash ~/.dotfiles/modules/zsh/start.sh
+bash ~/.dotfiles/modules/nvim/start.sh & disown
