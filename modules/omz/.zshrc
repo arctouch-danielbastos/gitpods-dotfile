@@ -16,6 +16,9 @@ plugins=(git aliases gh)
 source "$dotfile_dir/modules/omz/install/oh-my-zsh.sh"
 # Avoid clash with gitpod CLI
 unalias gp
+unalias gl
+
 alias gs="git status --short"
+alias gl="git log --oneline --decorate"
   
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
