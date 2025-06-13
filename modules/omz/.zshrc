@@ -20,5 +20,15 @@ unalias gl
 
 alias gs="git status --short"
 alias gl="git log --oneline --decorate"
+alias wtr="yarn test:rendererw"
+alias wtj="yarn test:jsw"
+
+wu() {
+  local page="$1"
+  local base=$(gp url 8082)
+  echo "${base}/${page}"
+}
+
+
   
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
