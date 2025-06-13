@@ -20,8 +20,18 @@ unalias gl
 
 alias gs="git status --short"
 alias gl="git log --oneline --decorate"
-alias ytr="yarn test:rendererw"
-alias ytj="yarn test:jsw"
+
+wt() {
+  local file="$1"
+  if [[ "$file" == services/renderer* ]]; then
+    echo "🔧 Testing Renderer file: $file"
+    yarn test:rendererw "$file"
+  else
+    echo "🧪 Testing app/js file: $file"
+    yarn test:jsw "$file"
+  fi
+}
+
 
 wu() {
   local page="$1"
