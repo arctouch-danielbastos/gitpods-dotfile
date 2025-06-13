@@ -20,8 +20,8 @@ unalias gl
 
 alias gs="git status --short"
 alias gl="git log --oneline --decorate"
-alias wtr="yarn test:rendererw"
-alias wtj="yarn test:jsw"
+alias ytr="yarn test:rendererw"
+alias ytj="yarn test:jsw"
 
 wu() {
   local page="$1"
