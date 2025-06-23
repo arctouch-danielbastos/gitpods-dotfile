@@ -36,7 +36,9 @@ wt() {
 wu() {
   local page="$1"
   local base=$(gp url 8082)
-  echo "${base}/${page}"
+  local url="${base}/${page}"
+  echo -n "$url" | echo "🌎 URL is: $url \n🧑🏾‍💻 Opening on your browser";
+  gp preview "${base}/${page}" --external
 }
 
 
