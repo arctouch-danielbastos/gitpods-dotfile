@@ -35,7 +35,6 @@ wt() {
   fi
 }
 
-
 wu() {
   local page="$1"
   local base=$(gp url 8082)
@@ -52,5 +51,16 @@ wpr(){
   echo -n "$url" | gp preview "$url" --external
 }
 
+function pr_open() {
+  local args=("$@")
+  local pr_id=$(gh pr list "${args[@]}" --json number,title,headRefName,baseRefName \
+    --template "$(printf '{{range .}}{{.title}}\t{{.headRefName}}\t{{.baseRefName}}\t{{.number}}\n{{end}}')" \
+    | gum table -s $'\t' -c title,branch,base,id \
+    | cut -f4)
+
+  [[ -n "$pr_id" ]] && gh pr view "$pr_id" --web
+}
+
+alias prs='pr_open -A "@me"'
   
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
