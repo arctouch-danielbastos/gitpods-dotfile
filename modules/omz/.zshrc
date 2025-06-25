@@ -12,6 +12,9 @@ ZSH_THEME="dbastos"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git aliases gh)
 
+# Add bin directory to $PATH
+export PATH="$PATH:$dotfile_dir/bin"
+
 # Install oh-my-zsh
 source "$dotfile_dir/modules/omz/install/oh-my-zsh.sh"
 # Avoid clash with gitpod CLI
@@ -41,6 +44,13 @@ wu() {
   gp preview "${base}/${page}" --external
 }
 
+wpr(){
+  local repo=$(gh browse -n)
+  local branch=$(git branch --show-current)
+  local url="${repo}/pull/new/${branch}"
+  echo -n "$url" | echo "🌎 Opening Github compare page...";
+  echo -n "$url" | gp preview "$url" --external
+}
 
   
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
